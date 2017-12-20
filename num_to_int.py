@@ -1,14 +1,14 @@
 
 ones_dict = { 
-			'one':   1, 'eleven':     11,
-			'two':   2, 'twelve':     12,
-			'three': 3, 'thirteen':   13,
-			'four':  4, 'fourteen':   14,
-			'five':  5, 'fifteen':    15,
-			'six':   6, 'sixteen':    16,
-			'seven': 7, 'seventeen':  17,
-			'eight': 8, 'eighteen':   18,
-			'nine':  9, 'nineteen':   19 
+	'one':   1, 'eleven':     11,
+	'two':   2, 'twelve':     12,
+	'three': 3, 'thirteen':   13,
+	'four':  4, 'fourteen':   14,
+	'five':  5, 'fifteen':    15,
+	'six':   6, 'sixteen':    16,
+	'seven': 7, 'seventeen':  17,
+	'eight': 8, 'eighteen':   18,
+	'nine':  9, 'nineteen':   19 
 			}
 
 tens_dict = {
@@ -32,17 +32,79 @@ groups_dict = {
 
 # print(ones_dict["one"])
 
-number_example = ["three hundred ninety nine million four hundred twenty one thousand seven hundred fourteen"];
+number_example = "three hundred ninety nine million four hundred twenty one thousand seven hundred fourteen"
 
 # if number_example in tens_dict:
 # 	print(number_example)
 
 # print (len number_example[0[1]])
 
-for i in number_example:
-	print(i)
-	if i == ' ':
-		print("there is a space")
+# print(number_example[0])
+
+
+
+
+word_list = []
+# print(number_example.split())
+x = number_example.split()
+# x = "three hundred"
+'''
+for i in x:
+	# print(i)
+	if i == "million":
+		print("a million")
+		for i in x:
+			if i != "million":
+				# print(i)
+				if i in ones_dict or tens_dict:
+					print(i)
+					# print(ones_dict[i])
+			else:
+				
+				print("milly")
+				break
+'''
+
+x = ["three", "hundred"]
+print(x)
+for i in x:
+	# print(i)
+	if i in ones_dict:
+		print(i)
+		y = x[i + 1]
+		print(y)
+	# if i in ones_dict or tens_dict:
+	# 	print(i)
+	# if i == "thousand":
+	# 	print("some thousands")
+
+
+	# if i in ones_dict:
+	# 	print(ones_dict[i])
+
+	# print(number_example.split())
+	# word_list.append(i)
+	# if i == ' ':
+	# 	print("there is a space")
+	# 	print(word_list)
+		# word_list = word_list[0]
+		# if word_list in ones_dict:
+		# 	print(ones_dict[word_list])
+
+
+	# print(type(i))
+	# print(number_example[0])
+
+
+		# for i in number_example:
+		# 	if i in ones_dict:
+		# 		print(ones_dict[i])
+
+
+
+
+	# if i == ' ':
+	# 	print("there is a space")
 	# print(i)
 
 
