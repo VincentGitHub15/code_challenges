@@ -65,14 +65,34 @@ for i in x:
 				break
 '''
 
-x = ["three", "hundred"]
+x = ["three", "hundred", "thirty", "four"]
 print(x)
-for i in x:
+# print(len(x))
+
+for i in range(len(x)-1):  
 	# print(i)
-	if i in ones_dict:
-		print(i)
-		y = x[i + 1]
-		print(y)
+	if x[i] in ones_dict:
+		print(x[i])
+		print(ones_dict[x[i]])
+		# print(x[i+1])
+		if x[i+1] in groups_dict:
+			print(x[i+1])
+			print(groups_dict[x[i+1]])
+
+	elif x[i] in tens_dict:
+		print(x[i])
+		print(tens_dict[x[i]])
+		if x[i+1] in ones_dict:
+			print(x[i+1]) 
+			print(ones_dict[x[i+1]])
+	else:
+		print("bye")
+
+# for i in x:
+# 	# print(i)
+# 	if i in ones_dict:
+# 		print(i)
+		
 	# if i in ones_dict or tens_dict:
 	# 	print(i)
 	# if i == "thousand":
