@@ -65,28 +65,54 @@ for i in x:
 				break
 '''
 
-x = ["three", "hundred", "thirty", "four"]
+'''
+DEC 22 about to interview so closing this script off and practicing...
+
+
+x = ["three", "hundred", "million", "thirty", "four", "thousand"]
 print(x)
 # print(len(x))
 
 for i in range(len(x)-1):  
 	# print(i)
 	if x[i] in ones_dict:
-		print(x[i])
-		print(ones_dict[x[i]])
+		# print(x[i])
+		# print(ones_dict[x[i]])
 		# print(x[i+1])
 		if x[i+1] in groups_dict:
-			print(x[i+1])
+			print(ones_dict[x[i]])
 			print(groups_dict[x[i+1]])
 
+			# print('ib', i)
+			i = i+1
+			# print('i:',i)
+		else:
+			print(ones_dict[x[i]])
+
 	elif x[i] in tens_dict:
-		print(x[i])
-		print(tens_dict[x[i]])
+		# print(x[i])
+		# print(tens_dict[x[i]])
 		if x[i+1] in ones_dict:
-			print(x[i+1]) 
+			# print(x[i+1]) 
+			print(tens_dict[x[i]])
 			print(ones_dict[x[i+1]])
+			if x[i+2] in groups_dict:
+				print(groups_dict[x[i+2]])
+			# print('ib', i)
+			i = i+1
+			# print('i:',i)
+		else:
+			print(tens_dict[x[i]])
+	# elif x[i] == "million":
+	# 	print("million")
+
+	# elif x[i] == "thousand":
+	# 	print("thousand")
 	else:
 		print("bye")
+'''
+
+
 
 # for i in x:
 # 	# print(i)
@@ -126,6 +152,24 @@ for i in range(len(x)-1):
 	# if i == ' ':
 	# 	print("there is a space")
 	# print(i)
+
+
+
+
+x = ["three", "hundred", "million", "thirty", "four", "thousand"]
+total = 0
+for i in range(len(x)-1):  
+	print(i)
+	if x[i+1] == "million":
+		total = x[i]*1000 + total
+
+	# elif:
+
+
+
+
+
+
 
 
 
