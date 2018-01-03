@@ -162,7 +162,7 @@ for i in range(len(x)-1):
 	print(i)
 	if x[i+1] == "million":
 		total = x[i]*1000 + total
-
+		print(total)
 	# elif:
 
 
