@@ -4,7 +4,18 @@
 vals = '1,3,5,8,9;52'
 
 for i in range(len(vals)):
-	print(vals[i])
+	if vals[i] == ";":
+		# print(vals[i+1])
+		# print(len(vals))
+		# print(i)
+		if len(vals)==i+3:
+			# print(vals[i+2])
+			total = int(str(vals[i+1])+ str(vals[i+2]))
+		else: 
+			total = int(vals[i+1])
+		print(type(total))
+		print(total)
+
 
 # print(vals)
 
